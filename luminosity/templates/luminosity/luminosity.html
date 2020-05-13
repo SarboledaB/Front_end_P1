@@ -1,0 +1,21 @@
+{% extends 'luminosity/base.html' %}
+{% block content %}
+<div class="container">
+    <form method="get">
+        <input type="number" name="Valor">
+        <input type="number" name="latitud" step='any'>
+        <input type="number" name="longitud" step='any'>
+        <input type="text" name="Tipo">
+        <button type="submit">Adicionar</button>
+    </form>
+    {% for measure in luminositys %}
+    <ul class="list-group">
+        <li class="list-group-item">{{measure.id}} = {{measure.Valor}}</li>
+        <li class="list-group-item">Tipo de terreno = {{measure.Tipo}}</li>
+        <li class="list-group-item">latitud = {{measure.latitud}}</li>
+        <li class="list-group-item">Longitud= {{measure.longitud}}</li>
+
+    </ul>
+    {% endfor %}
+</div>
+{% endblock %}
