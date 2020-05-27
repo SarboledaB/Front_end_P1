@@ -14,9 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.conf.urls import url
 from luminosity import views as luminosity_views
 
 urlpatterns = [
-    path('', luminosity_views.luminosity, name='luminosity'), 
+    url('', luminosity_views.luminosity, name='luminosity'), 
 ]
