@@ -15,6 +15,7 @@ def luminosity(request):
             # Crea el json para realizar la petición POST al Web Service
             args = {'Tipo': Tipo , 'Valor': Valor, 'latitud': latitud, 'longitud': longitud}
             response = requests.post('http://127.0.0.1:8000/luminositys/', args)
+            response = requests.post('https://pi1-eafit-sarboledab.azurewebsites.net/luminositys/', args)
             # Convierte la respuesta en JSON
             luminosity_json = response.json()
 
