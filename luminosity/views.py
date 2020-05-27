@@ -21,6 +21,7 @@ def luminosity(request):
 
     # Realiza una petición GET al Web Services
     response = requests.get('http://127.0.0.1:8000/luminositys/')
+    response = requests.get('https://pi1-eafit-sarboledab.azurewebsites.net/luminositys/')
     # Convierte la respuesta en JSON
     luminositys = response.json()
     # Rederiza la respuesta en el template luminosity
